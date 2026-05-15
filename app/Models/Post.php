@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use Sluggable;
+    protected $fillable = ['title'];
 
     public function tags()
     {
