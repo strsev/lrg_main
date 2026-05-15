@@ -28,7 +28,7 @@
                             <div class="card-header">
                                 <h3 class="card-title">Создание статьи</h3>
                             </div>
-                            <form action="{{ route('posts.store')}}" method="post" role="form">
+                            <form action="{{ route('posts.store')}}" method="post" role="form"  enctype="multipart/form-data">
                                 @csrf
                                 <div class="card-body">
                                     <div class="form-group">

@@ -9,11 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use Sluggable;
-    protected $fillable = ['title'];
 
+    protected $fillable = ['title', 'description', 'content', 'category_id', 'thumbnail'];
     public function tags()
     {
-        return $this-> belongsTomany(Tag::class);
+        return $this-> belongsTomany(Tag::class)->withTimestamps();
     }
 
     public function category()
