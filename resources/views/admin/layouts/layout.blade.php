@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="{{  asset ('assets/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{  asset ('assets/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset ('assets/css/select2.min.css') }}">
+  <link rel="stylesheet" href="{{ asset ('assets/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
   @include('admin.alerts')
 </head>
 <body class="hold-transition sidebar-mini">
@@ -251,7 +253,7 @@
               </ul>
           </li>
             
-          {{-- <li class="nav-item has-treeview">
+         <li class="nav-item has-treeview">
              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-archive"></i>
                 <p>
@@ -269,11 +271,11 @@
                   <li class="nav-item">
                       <a href="{{ route('posts.create') }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Новый статья</p>
+                        <p>Новая статья</p>
                       </a>
                   </li>
               </ul>
-          </li> --}}
+          </li> 
             
         </ul>
       </nav>
@@ -309,6 +311,19 @@
 <script src="{{  asset ('assets/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{  asset ('assets/js/demo.js') }}"></script>
+
+<script src="{{  asset ('assets/js/select2.full.min.js') }}"></script>
+
+<script>
+  $(function() {
+    $('.select2').select2()
+
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+  })
+</script>
+
 @stack('scripts')
 </body>
 </html>
