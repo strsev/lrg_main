@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
   <title>AdminLTE 3 | Blank Page</title>
 
   <!-- Google Font: Source Sans Pro -->
@@ -15,6 +16,9 @@
   @include('admin.alerts')
 </head>
 <body class="hold-transition sidebar-mini">
+
+
+
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
@@ -198,15 +202,16 @@
               <p>Главная</p>    
             </a>
           </li>
-          <li class="nav nav-treeview">
-              <a href="#" class="nav-link">
+          
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-archive"></i>
                 <p>
                   Категории
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
-              <ul class="nav nav-treeview">
+              <ul class="nav-item has-treeview">
                   <li class="nav-item">
                     <a href="{{ route('categories.index') }}" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
@@ -220,7 +225,56 @@
                       </a>
                   </li>
               </ul>
-            </li>
+          </li>
+          
+          <li class="nav-item has-treeview">
+             <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-archive"></i>
+                <p>
+                  Тэги
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav-item has-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('tags.index') }}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Список тэгов</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="{{ route('tags.create') }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Новый тэг</p>
+                      </a>
+                  </li>
+              </ul>
+          </li>
+            
+          {{-- <li class="nav-item has-treeview">
+             <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-archive"></i>
+                <p>
+                  Статьи
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav-item has-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('posts.index') }}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Список статей</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="{{ route('posts.create') }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Новый статья</p>
+                      </a>
+                  </li>
+              </ul>
+          </li> --}}
+            
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
